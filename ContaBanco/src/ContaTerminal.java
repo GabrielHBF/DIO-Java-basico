@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class ContaTerminal {
@@ -9,7 +10,7 @@ public class ContaTerminal {
         BigDecimal sladoDaConta;
         String mensagem;
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
         System.out.println("Por favor, digite o número da Agência !");
         numeroDaAgencia = scanner.next();

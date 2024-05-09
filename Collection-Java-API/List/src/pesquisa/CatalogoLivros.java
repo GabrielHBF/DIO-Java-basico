@@ -5,7 +5,7 @@ public class CatalogoLivros {
 
     List<Livro> listLivros = new ArrayList<>();
 
-    public CatalogoLivros(String autor,String titulo, int anoDePublicacao){
+    public void adicionarLivros(String autor,String titulo, int anoDePublicacao){
         listLivros.add(new Livro(autor, titulo, anoDePublicacao));
     }
 
@@ -53,5 +53,13 @@ public class CatalogoLivros {
 
     }
 
+    public static void main(String[] args) {
+        CatalogoLivros livros =  new CatalogoLivros();
 
+        livros.adicionarLivros("gabriel", "os fodas", 2024);
+        livros.adicionarLivros("gabriel", "alo", 2014);
+       System.out.println(livros.pesquisaPorIntervaloAnos(2000, 2025));
+        
+
+}
 }

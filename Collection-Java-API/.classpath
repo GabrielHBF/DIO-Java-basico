@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="pesquisa/|set/" kind="src" path="List/src"/>
+	<classpathentry kind="src" path="List/src/pesquisa"/>
+	<classpathentry kind="src" path="List/src/set"/>
+	<classpathentry kind="output" path="List/bin"/>
+</classpath>

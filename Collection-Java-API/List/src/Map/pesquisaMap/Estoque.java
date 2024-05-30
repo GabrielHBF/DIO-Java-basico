@@ -50,7 +50,7 @@ public class Estoque {
 		}
 		public Produto obterProdutoMaisBarato() {
 			Produto produtoMaisBarato = null;
-			double valorMaisbarato = 0d;
+			double valorMaisbarato = Double.MAX_VALUE;
 			if(!ListaDeProdutos.isEmpty()) {
 				for(Produto p : ListaDeProdutos.values()) {
 					if(p.getPreco() < valorMaisbarato) {
@@ -64,10 +64,10 @@ public class Estoque {
 		
 		public Produto ProdutoComMaiorValorNoEstoque() {
 			Produto ProdutoMaiorValor = null;
-			double maiorValor = 0d;
+			double maiorValor = Double.MIN_VALUE;
 			if(!ListaDeProdutos.isEmpty()) {
 				for(Produto p : ListaDeProdutos.values()) {
-					if(maiorValor > p.getPreco() * p.getQuantidade()) {
+					if(maiorValor < p.getPreco() * p.getQuantidade()) {
 						ProdutoMaiorValor = p;
 						maiorValor = p.getPreco() * p.getQuantidade();
 					}
@@ -85,6 +85,8 @@ public class Estoque {
 			estoque.exibirProdutos();
 			System.out.println(estoque.obterProdutoMaisCaro());
 			System.out.println(estoque.calcularValorTotalEstoque());
+			System.out.println(estoque.ProdutoComMaiorValorNoEstoque());
+			System.out.println(estoque.obterProdutoMaisBarato());
 			
 		}
 }	
